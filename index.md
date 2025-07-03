@@ -20,7 +20,7 @@ features:
     link: /player/
     linkText: Play Now
   - title: JSCore for Developers
-    details: Start writing JSCore modules through guided examples, covers everything from core functions to calling Java code from JS.
+    details: WIP
     icon: 🛠️
     link: /dev/
     linkText: Get Started

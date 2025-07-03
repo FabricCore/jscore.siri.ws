@@ -35,6 +35,10 @@ export default withMermaid({
                     collapsed: false,
                     items: [
                         {
+                            text: "What is JSCore?",
+                            link: "/player/",
+                        },
+                        {
                             text: "Quick Start",
                             link: "/player/quickstart",
                         },

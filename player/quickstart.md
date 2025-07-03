@@ -45,4 +45,4 @@ We have a [list of all packages](https://github.com/FabricCore/jscore-openrepo?t
 ```js
 /pully install package1 package2 ...
 ```
-> Can't make up your mind? Join [**Discord**](https://discord.gg/XfSZ5tc7Sk) to learn more about the project.
+Can't make up your mind? Join [**Discord**](https://discord.gg/XfSZ5tc7Sk) to learn more about the project.

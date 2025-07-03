@@ -80,3 +80,5 @@ sequenceDiagram
     Minecraft->>Yarnwrap: Here's class_310
     Yarnwrap->>JSCore: Here's MinecraftClient
 ```
+
+This mod is still in its early stages, please join [**Discord**](https://discord.gg/XfSZ5tc7Sk) for support or to sway its development.

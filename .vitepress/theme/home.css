@@ -1,0 +1,9 @@
+@media (min-width: 640px) {
+  .name {
+    max-width: 600px !important;
+  }
+
+  .tagline {
+    max-width: 620px !important;
+  }
+}

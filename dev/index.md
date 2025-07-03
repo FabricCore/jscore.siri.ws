@@ -1,0 +1,3 @@
+# JSCore for Developers
+
+WIP

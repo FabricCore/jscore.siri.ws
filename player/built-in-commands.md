@@ -9,7 +9,7 @@ Executes a JS expression.
 ### Basic Usage
 
 For example, to show 1 + 1 = 2
-```js
+```sh
 /jscore eval 1 + 1
 ```
 
@@ -42,7 +42,7 @@ firstTenFibs.join(', ')
 ```
 We can squeeze them into one line by removing all the line breaks, which gives us the command below.
 
-```js
+```sh
 /jscore eval function fib(n) { switch(n) { case 1: case 2: return 1; default: return fib(n-1)+fib(n-2)} }; let firstTenFibs=[]; for(let i=1;i<=10;i++) firstTenFibs.push(fib(i)); firstTenFibs.join(', ')
 ```
 ## /jscore web &lt;url&gt;
@@ -55,7 +55,7 @@ Evaluate a JS script file in `~/.minecraft/config/jscore`.
 - **Strict** mode will execute the file no matter what.
 - **Lazy** mode will execute the file only if it has not been executed before.
 
-```js
+```sh
 /jscore require strict init.js
 ```
 
@@ -68,7 +68,7 @@ All files related to JSCore are in `~/.minecraft/config/jscore`.
 Creates a snapshot (backup) of the folder, and puts it in `~/.minecraft/config/jscore-snapshots`.
 
 You can optionally give the snapshot a name with **/jscore snapshot create &lt;label&gt;**. If there is already another snapshot with the same name, the new snapshot will replace the old one.
-```js
+```sh
 /jscore snapshot create bob-the-snapshot
 ```
 
@@ -76,7 +76,7 @@ You can optionally give the snapshot a name with **/jscore snapshot create &lt;l
 
 Delete a snapshot.
 
-```js
+```sh
 /jscore snapshot delete bob-the-snapshot.zip
 ```
 
@@ -84,7 +84,7 @@ Delete a snapshot.
 
 Restore files in `~/.minecraft/config/jscore` to a previous snapshot (backup).
 
-```js
+```sh
 /jscore snapshot restore bob-the-snapshot.zip
 ```
 
@@ -94,7 +94,7 @@ The current files in `~/.minecraft/config/jscore` will be lost after this.
 
 Download a snapshot from ***url*** and replace `~/.minecraft/config/jscore` with that snapshot.
 
-```js
+```sh
 /jscore snapshot pull https://jscore.siri.ws/bootstrap.zip
 ```
 

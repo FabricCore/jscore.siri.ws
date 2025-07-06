@@ -12,11 +12,11 @@ JSCore requires Fabric API and Yarnwrap
 ### 2. Setup JSCore
 
 After launching the game, join a world to run the command
-```js
+```sh
 /jscore snapshot pull http://jscore.siri.ws/bootstrap.zip
 ```
 Then either restart the game or simulate a restart with
-```js
+```sh
 /jscore restart
 ``` 
 You will need to rejoin world for changes to take effect.
@@ -24,25 +24,25 @@ You will need to rejoin world for changes to take effect.
 ### 3. Pre-flight Check
 
 Check if the JS runtime is working.
-```js
+```sh
 /jscore eval 1 + 1
 ```
 
 Or check your in-game position.
-```js
+```sh
 /jscore eval let root = Packages.ws.siri.jscore.mapping.JSPackage.getRoot();
 ```
-```js
+```sh
 /jscore eval let client = root.net.minecraft.client.MinecraftClient.getInstance();
 ```
-```js
+```sh
 /jscore eval client.player.getBlockPos().toString()
 ```
 
 ### 4. Installing Packages
 
 We have a [list of all packages](https://github.com/FabricCore/jscore-openrepo?tab=readme-ov-file#all-packages) you can install without restarting the game.
-```js
+```sh
 /pully install package1 package2 ...
 ```
 Can't make up your mind? Join [**Discord**](https://discord.gg/XfSZ5tc7Sk) to learn more about the project.

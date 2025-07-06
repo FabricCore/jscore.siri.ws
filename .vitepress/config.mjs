@@ -74,6 +74,20 @@ export default withMermaid({
                         },
                     ],
                 },
+                {
+                    text: "Baby Steps",
+                    collapsed: false,
+                    items: [
+                        {
+                            text: "A Welcoming Note",
+                            link: "/dev/",
+                        },
+                        {
+                            text: "Your First Package",
+                            link: "/dev/basics/first-package",
+                        },
+                    ],
+                },
             ],
         },
 

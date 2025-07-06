@@ -20,7 +20,7 @@ features:
     link: /player/
     linkText: Play Now
   - title: JSCore for Developers
-    details: WIP
+    details: Try something new today?
     icon: 🛠️
     link: /dev/
     linkText: Get Started

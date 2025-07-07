@@ -7,8 +7,8 @@ Read the [**Quickstart Guide**](/player/quickstart.html) to setup JSCore before 
 If you're reading this, it probably means you want to learn how to modify Minecraft with JSCore. Awesome! You've come to the right place. This guide will teach you things such as:
 
 - How to setup and run [your first JSCore package](./basics/first-package).
-- How to create and handle [commands]().
-- [Listening to events](), and automated tasks.
+- How to create and handle [commands](./how-tos/register-commands).
+- [Listening to events](./how-tos/listen-to-events), and automated tasks.
 - And much more...
 
 ### Recommendations

@@ -86,6 +86,10 @@ export default withMermaid({
                             text: "Your First Package",
                             link: "/dev/basics/first-package",
                         },
+                        {
+                            text: "Language Flavour",
+                            link: "/dev/basics/language-features",
+                        },
                     ],
                 },
             ],

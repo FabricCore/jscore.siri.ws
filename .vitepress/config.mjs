@@ -45,7 +45,7 @@ export default withMermaid({
                         {
                             text: "Built-in Commands",
                             link: "/player/built-in-commands",
-                        }
+                        },
                     ],
                 },
                 {
@@ -75,7 +75,7 @@ export default withMermaid({
                     ],
                 },
                 {
-                    text: "Baby Steps",
+                    text: "JSCore Basics",
                     collapsed: false,
                     items: [
                         {
@@ -89,6 +89,20 @@ export default withMermaid({
                         {
                             text: "Language Flavour",
                             link: "/dev/basics/language-features",
+                        },
+                    ],
+                },
+                {
+                    text: "Idiomatic JSCore",
+                    collapsed: false,
+                    items: [
+                        {
+                            text: "About This Section",
+                            link: "/dev/how-tos/",
+                        },
+                        {
+                            text: "Create Commands",
+                            link: "/dev/how-tos/register-commands",
                         },
                     ],
                 },

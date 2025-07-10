@@ -128,7 +128,7 @@ ClientCommandRegistrationCallback.EVENT.register(
 );
 ```
 
-Each time you restart JSCore, a new listener is added to the event. To prevent this, you may want to set a persistent global variable. By convention, **module.globals.yourPackageName** is given to that package.
+Each time you restart JSCore, a new listener is added to the event. To prevent this, you may want to set a persistent global variable. By convention, **module.globals.yourPackageName** is given to the package with that name.
 
 ```js
 module.globals ??= {};

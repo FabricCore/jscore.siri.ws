@@ -51,7 +51,7 @@ Download a script from ***url*** and execute it.
 
 ## /jscore require &lt;mode&gt; &lt;file&gt;
 
-Evaluate a JS script file in `~/.minecraft/config/jscore`.
+Evaluate a JS script file in `.minecraft/config/jscore`.
 - **Strict** mode will execute the file no matter what.
 - **Lazy** mode will execute the file only if it has not been executed before.
 
@@ -61,11 +61,11 @@ Evaluate a JS script file in `~/.minecraft/config/jscore`.
 
 ## /jscore snapshot
 
-All files related to JSCore are in `~/.minecraft/config/jscore`.
+All files related to JSCore are in `.minecraft/config/jscore`.
 
 ### /jscore snapshot create
 
-Creates a snapshot (backup) of the folder, and puts it in `~/.minecraft/config/jscore-snapshots`.
+Creates a snapshot (backup) of the folder, and puts it in `.minecraft/config/jscore-snapshots`.
 
 You can optionally give the snapshot a name with **/jscore snapshot create &lt;label&gt;**. If there is already another snapshot with the same name, the new snapshot will replace the old one.
 ```sh
@@ -82,20 +82,20 @@ Delete a snapshot.
 
 ### /jscore snapshot restore &lt;label&gt;
 
-Restore files in `~/.minecraft/config/jscore` to a previous snapshot (backup).
+Restore files in `.minecraft/config/jscore` to a previous snapshot (backup).
 
 ```sh
 /jscore snapshot restore bob-the-snapshot.zip
 ```
 
-The current files in `~/.minecraft/config/jscore` will be lost after this.
+The current files in `.minecraft/config/jscore` will be lost after this.
 
 ### /jscore snapshot pull &lt;url&gt;
 
-Download a snapshot from ***url*** and replace `~/.minecraft/config/jscore` with that snapshot.
+Download a snapshot from ***url*** and replace `.minecraft/config/jscore` with that snapshot.
 
 ```sh
 /jscore snapshot pull https://jscore.siri.ws/bootstrap.zip
 ```
 
-The current files in `~/.minecraft/config/jscore` will be lost after this.
+The current files in `.minecraft/config/jscore` will be lost after this.

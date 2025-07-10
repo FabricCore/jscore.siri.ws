@@ -8,7 +8,7 @@ The command **/devtools new &lt;name&gt;** creates a new package with that name.
 /devtools new my-package
 ```
 
-Open the folder `~/.minecraft/config/modules/my-package` in your preferred text editor, e.g. [VS Code](https://code.visualstudio.com/).
+Open the folder `.minecraft/config/modules/my-package` in your preferred text editor, e.g. [VS Code](https://code.visualstudio.com/).
 
 ## 2. House Tour
 
@@ -65,11 +65,14 @@ A few messages should appear in chat.
 [LOG] Learn how to write a module on https://jscore.siri.ws/dev/
 ```
 
+> There is also a **stop.js** which runs right before JSCore stops, this includes **/jscore restart**.
+
 ### index.js
 
 This file is the **library entry point** of your package, which will be explained in a bit.
 
 ```js
+// index.js
 function packageName() {
   return "my-package!";
 }
@@ -95,11 +98,13 @@ console.log(name);
 ```
 
 Then restart JSCore with **/jscore restart**.
+
 ```sh
 /jscore restart
 ```
 
 We can see in chat.
+
 ```
 [LOG] my-package!
 ```

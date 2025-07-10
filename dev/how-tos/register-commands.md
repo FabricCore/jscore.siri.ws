@@ -284,7 +284,7 @@ function escapeSubcommand() {
 
               for (let i = 0; i < 20; i++) {
                 // add a suggestion entry
-                suggestions.push(now.toUTCString());
+                suggestions.push(now.toTimeString());
                 // increment time by 10 minutes
                 now.setMinutes(now.getMinutes() + 10);
               }
@@ -301,7 +301,7 @@ function escapeSubcommand() {
 
 The command **/myCommand escape &lt;name&gt; &lt;time&gt;** now suggests the current time, 10 minutes after current time, 20 minutes after, and so on.
 
-> The generator function takes **CommandContext** as an argument, learn more about **CommandContext** on [Fabric Docs](https://docs.fabricmc.net/develop/commands/suggestions).
+> The generator function may take **CommandContext** as an argument, learn more about **CommandContext** on [Fabric Docs](https://docs.fabricmc.net/develop/commands/suggestions).
 
 <!--
 ### Using Suggestion Providers

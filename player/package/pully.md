@@ -2,6 +2,15 @@
 
 A package manager to handle packages and dependencies - [repository view](https://github.com/FabricCore/jscore-openrepo/tree/master/packages/pully#pully)
 
+### Caution: Packages Can be Dangerous
+
+Just like malicious mods, malicious packages can damage your computer, some package repositories are safer than others.
+
+| Repository Name | Security Level                           | Recommendation                           |
+| --------------- | ---------------------------------------- | ---------------------------------------- |
+| core            | Highest, all updates are reviewed        | Packages are safe                        |
+| user            | Varies, packages are reviewed regularly. | Only install packages from trusted authors |
+
 ## /pully install [list of packages...]
 
 Install packages from a [package repository](https://github.com/FabricCore/jscore-openrepo).
@@ -43,4 +52,4 @@ The uninstall command will also **remove all unused packages**.
 
 ---
 
-To remove a package that is not installed with pully or is a Git repository, you can delete the package from `~/.minecraft/config/jscore/modules/`.
+To remove a package that is not installed with pully or is a Git repository, you can delete the package from `.minecraft/config/jscore/modules/`.

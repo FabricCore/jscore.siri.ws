@@ -52,6 +52,7 @@ console.log(content);
 **require("./file.js")** returns the value of **module.exports** in `./file.js`.
 
 ```js
+// file.js
 module.exports = {
   name: "Sirius",
   age: 19,
@@ -226,3 +227,16 @@ The evil twin of **module.exports**, **module.globals** can hold any value, and 
 ### module.eval(script)
 
 Runs a script at the module, it is not recommended to mess around with this.
+
+## Rhino Shenanigans
+
+JSCore uses [Rhino](https://rhino.github.io/) as its JavaScript runtime, here are a list of things to watch out for.
+
+| What                                  | This doesn't work | Suggested fix                                    |
+| ------------------------------------- | ----------------- | ------------------------------------------------ |
+| Varargs not allow for arrow functions | `(...args) => {}` | `function(..args) {}`                            |
+| Cannot spread arguments               | `myFun(...args)`  | `myFun.apply(null, args)`                        |
+| Const prevent script reload           | `const`           | `let`                                            |
+| Classes are not supported             | `class MyClass`   | `function MyClass()`<br>`MyClass.method = /* */` |
+
+> If you find anything that should work but isn't working, let us know on [**Discord**](https://discord.gg/XfSZ5tc7Sk) so we can add it to this list.

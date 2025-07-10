@@ -106,6 +106,32 @@ export default withMermaid({
                         },
                     ],
                 },
+                {
+                    text: "The Dark Arts of JSCore",
+                    collapsed: true,
+                    items: [
+                        {
+                            text: "About This Section",
+                            link: "/dev/dark-arts/",
+                        },
+                        {
+                            text: "Raw Java Imports",
+                            link: "/dev/dark-arts/raw-java",
+                        },
+                        {
+                            text: "Minecraft Internals",
+                            link: "/dev/dark-arts/yarnwrap",
+                        },
+                        {
+                            text: "The Init Script System",
+                            link: "/dev/dark-arts/entry-points",
+                        },
+                        {
+                            text: "Using Prelude",
+                            link: "/dev/dark-arts/prelude",
+                        },
+                    ],
+                },
             ],
         },
 

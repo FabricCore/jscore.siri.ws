@@ -104,6 +104,10 @@ export default withMermaid({
                             text: "Create Commands",
                             link: "/dev/how-tos/register-commands",
                         },
+                        {
+                            text: "Listen to Events",
+                            link: "/dev/how-tos/listen-to-events",
+                        },
                     ],
                 },
                 {
@@ -123,12 +127,8 @@ export default withMermaid({
                             link: "/dev/dark-arts/yarnwrap",
                         },
                         {
-                            text: "The Init Script System",
+                            text: "Init Script System",
                             link: "/dev/dark-arts/entry-points",
-                        },
-                        {
-                            text: "Using Prelude",
-                            link: "/dev/dark-arts/prelude",
                         },
                     ],
                 },

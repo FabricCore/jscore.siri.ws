@@ -55,6 +55,39 @@ if (player != null) {
 }
 ```
 
+### Wrapper Behaviour
+
+**yarn-extra** also provide two additional methods, both imported by default.
+
+- **wrap(object)** - wraps an object if it requires wrapping.
+- **wrap(object, true)** - wraps and object without checks.
+- **unwrap(object)** reveals the underlying object.
+
+> **java.\*** classes are not wrapped by default.
+
+Say you have a **List&lt;Entity&gt;** and you want to insert a **Wrapped(Entity)** into it. You could either do it the simple way: by unwrapping every **Wrapped(Entity)** then adding it to the list.
+
+```js
+let list : List<Entity> = /* */;
+let e : Wrapped(Entity) = /* */;
+
+list.add(unwrap(e));
+
+console.log(list);
+```
+
+Sometimes it may be more convenient to wrap the list instead. Especially if your package is a library, so other developers will not have to wrap the objects manually.
+
+```js
+let list : List<Entity> = /* */;
+let e : Wrapped(Entity) = /* */;
+let wrappedList : Wrapped(List<Entity>) = wrap(list, true);
+
+wrappedList.add(e);
+
+console.log(unwrap(wrappedList));
+```
+
 ## Examples
 
 ### Example 1: Printing to Chat without `console`

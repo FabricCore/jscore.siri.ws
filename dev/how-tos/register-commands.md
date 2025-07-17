@@ -174,18 +174,14 @@ To create the following commands.
 
 ```js
 // init.js
-let { StringArgumentType } = com.mojang.brigadier.arguments;
 let command = require("command");
 
 // First, write the code for what each subcommand does.
-function greetExecute(ctx) {
-  let name = StringArgumentType.getString(ctx, "name");
+function greetExecute(name) {
   console.log(`Hello ${name}.`);
 }
 
-function escapeExecute(ctx) {
-  let name = StringArgumentType.getString(ctx, "name");
-  let time = StringArgumentType.getString(ctx, "time");
+function escapeExecute(name, time) {
   console.log(`Um ${name}, it's ${time} and I gotta go, cya.`);
 }
 
@@ -194,7 +190,7 @@ function greetSubcommand() {
   return {
     args: {
       name: {
-        type: StringArgumentType.word(),
+        type: "word",
         execute: greetExecute,
       },
     },
@@ -205,10 +201,10 @@ function escapeSubcommand() {
   return {
     args: {
       name: {
-        type: StringArgumentType.word(),
+        type: "word",
         args: {
           time: {
-            type: StringArgumentType.greedyString(),
+            type: "greedy",
             execute: escapeExecute,
           },
         },
@@ -227,7 +223,20 @@ command.register({
 });
 ```
 
-To see a list of argument types, click [here](https://github.com/Mojang/brigadier/tree/master/src/main/java/com/mojang/brigadier/arguments).
+### Argument Types
+
+| Argument type | Description                |
+| ------------- | -------------------------- |
+| `bool`        | Boolean value              |
+| `int`         | Integer value              |
+| `long`        | Long value                 |
+| `float`       | Float value                |
+| `double`      | Double value               |
+| `word`        | Single word                |
+| `string`      | String, can contain spaces |
+| `greedy`      | The rest of the command    |
+
+The numeric argument types can take an additional `min`, `max` parameter.
 
 > To keep **init.js** free of clutter, you can move the functions to a separate file, and import them in **init.js**.
 
@@ -247,7 +256,7 @@ function greetSubcommand() {
   return {
     args: {
       name: {
-        type: StringArgumentType.word(),
+        type: "word",
         execute: greetExecute,
         suggests: ["Joe", "Bob", "Alice"],
       },
@@ -272,11 +281,11 @@ function escapeSubcommand() {
   return {
     args: {
       name: {
-        type: StringArgumentType.word(),
+        type: "word",
         suggests: ["Joe", "Bob", "Alice"],
         args: {
           time: {
-            type: StringArgumentType.greedyString(),
+            type: "greedy",
             execute: escapeExecute,
             suggests: () => {
               let suggestions = [];
@@ -317,7 +326,7 @@ function greetSubcommand() {
   return {
     args: {
       name: {
-        type: StringArgumentType.word(),
+        type: "word",
         execute: greetExecute,
         suggests: nameSuggestions,
       },

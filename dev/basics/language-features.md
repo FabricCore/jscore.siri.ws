@@ -193,17 +193,18 @@ Here are some but not all methods provided by **rinode**, refer to package docum
 
 `fs` can be imported with `require("fs")`.
 
-| Method signature             | Description                          |
-| ---------------------------- | ------------------------------------ |
-| `readFileSync(path, "utf8")` | Read string content from file.       |
-| `appendFileSync(path, data)` | Append content to a file.            |
-| `writeFileSync(path, data)`  | Overwrite a file.                    |
-| `unlinkSync(path)`           | Delete a file or directory.          |
-| `readdirSync(path)`          | List items in a directory.           |
-| `mkdirSync(path)`            | Create a new direcotry.              |
-| `existsSync(path)`           | Check if a file or direcotry exists. |
-| `isDirSync(path)`            | Check if a path is a direcotry.      |
-| `isFileSync(path)`           | Check if a path is a file.           |
+| Method signature                    | Description                          |
+| ----------------------------------- | ------------------------------------ |
+| `readFileSync(path, "utf8")`        | Read string content from file.       |
+| `appendFileSync(path, data)`        | Append content to a file.            |
+| `writeFileSync(path, data)`         | Overwrite a file.                    |
+| `unlinkSync(path, recursive?)`      | Delete a file or directory.          |
+| `readdirSync(path)`                 | List items in a directory.           |
+| `mkdirSync(path)`                   | Create a new direcotry.              |
+| `existsSync(path)`                  | Check if a file or direcotry exists. |
+| `isDirSync(path)`                   | Check if a path is a direcotry.      |
+| `isFileSync(path)`                  | Check if a path is a file.           |
+| `symlinkSync(path, target, unused)` | Create symbolic link.                |
 
 All sync functions have their non-blocking variant.
 

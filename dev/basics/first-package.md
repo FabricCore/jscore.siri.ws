@@ -8,7 +8,9 @@ The command **/devtools new &lt;name&gt;** creates a new package with that name.
 /devtools new my-package
 ```
 
-Open the folder `.minecraft/config/modules/my-package` in your preferred text editor, e.g. [VS Code](https://code.visualstudio.com/).
+Open the folder `.minecraft/config/opened/my-package` in your preferred text editor, e.g. [VS Code](https://code.visualstudio.com/).
+
+> You can open any package with `/devtools open`, and close them without deleting with `/devtools close`.
 
 ## 2. House Tour
 

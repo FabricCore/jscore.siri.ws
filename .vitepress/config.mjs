@@ -108,6 +108,10 @@ export default withMermaid({
                             text: "Listen to Events",
                             link: "/dev/how-tos/listen-to-events",
                         },
+                        {
+                            text: "Working with Text",
+                            link: "/dev/how-tos/working-with-text",
+                        },
                     ],
                 },
                 {

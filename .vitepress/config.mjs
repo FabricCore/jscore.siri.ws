@@ -112,6 +112,10 @@ export default withMermaid({
                             text: "Working with Text",
                             link: "/dev/how-tos/working-with-text",
                         },
+                        {
+                            text: "Create User Options",
+                            link: "/dev/how-tos/managing-config",
+                        },
                     ],
                 },
                 {

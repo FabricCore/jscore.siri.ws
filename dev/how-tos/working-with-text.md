@@ -2,6 +2,15 @@
 
 The **text** package can be used to create formatted text, including coloured text, hoverable and clickable text, and much more.
 
+### Should I Use `console` Instead?
+
+You can use **console** and a **MOTD creator** to create formatted text, here is a comparison between features.
+
+| console                                                      | text                                                        |
+| ------------------------------------------------------------ | ----------------------------------------------------------- |
+| Colours, bold, underline, italic, strikethrough, obfuscated. | Everything available in console + hover and clickable text. |
+| Simple and compact, less readable.                           | Better readability, suitable for more complicated messages. |
+
 ## Add Dependencies
 
 Include [**text**](https://github.com/FabricCore/jscore-openrepo/tree/master/packages/text#text) as dependency in **package.json**.

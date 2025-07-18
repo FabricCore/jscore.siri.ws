@@ -10,7 +10,7 @@ The command **/devtools new &lt;name&gt;** creates a new package with that name.
 
 | Linux & MacOS                                                                                                                        | Windows                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Open the folder `.minecraft/config/opened/my-package` in your preferred text editor. | Open the folder `.minecraft/config/modules/my-package` in your preferred text editor. |
+| Open the folder `.minecraft/config/opened/` in your preferred text editor. | Open the folder `.minecraft/config/modules/my-package/` in your preferred text editor. |
 |You can open any package with `/devtools open`, and close them without deleting with `/devtools close`.|Windows does not support the use of symlinks.|
 
 We recommend a **text editor**, such as [**VSCode**](https://code.visualstudio.com/) or [**NeoVim**](https://neovim.io/) and not a heavyweight IDE.

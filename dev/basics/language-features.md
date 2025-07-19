@@ -201,10 +201,11 @@ Here are some but not all methods provided by **rinode**, refer to package docum
 | `unlinkSync(path, recursive?)`      | Delete a file or directory.          |
 | `readdirSync(path)`                 | List items in a directory.           |
 | `mkdirSync(path)`                   | Create a new direcotry.              |
+| `symlinkSync(path, target, unused)` | Create symbolic link.                |
 | `existsSync(path)`                  | Check if a file or direcotry exists. |
 | `isDirSync(path)`                   | Check if a path is a direcotry.      |
 | `isFileSync(path)`                  | Check if a path is a file.           |
-| `symlinkSync(path, target, unused)` | Create symbolic link.                |
+| `isSymlinkSync(path)`               | Check if a path is a symlink.        |
 
 All sync functions have their non-blocking variant.
 

@@ -52,29 +52,6 @@ addEventListener("startClientTickEvent", (client) => {
 
 By searching the fabric-api-events repository, we know **StartClientTickEvent** aliases to [**ClientTIckEvents.START_CLIENT_TICK**](https://maven.fabricmc.net/docs/fabric-api-0.129.0+1.21.7/net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents.StartTick.html) in Fabric API. The listener can take a [**MinecraftClient**](https://maven.fabricmc.net/docs/yarn-1.21.7+build.1/net/minecraft/client/MinecraftClient.html) as parameter. The name of the event is case insensitive.
 
-> ### The Event Object Syntax
->
-> The event object syntax is an alternative to the **addEventListener** syntax.
->
-> ```js
-> // init.js
-> let { StartClientTickEvent } = require("listener").events;
->
-> let previouslySneaking = false;
->
-> StartClientTickEvent.register((client) => {
->   if (client.player == null) return;
->
->   if (client.player.isSneaking() && !previouslySneaking) {
->     console.log("You are now sneaking.");
->     previouslySneaking = true;
->   } else if (!client.player.isSneaking() && previouslySneaking) {
->     console.log("You are no longer sneaking.");
->     previouslySneaking = false;
->   }
-> });
-> ```
-
 ### Register by Event
 
 You can also register to an event by providing the **Event** object. This only work if the event definition is provided. In the case of Fabric API events, their definitions are provided by the **fabric-api-events** package.

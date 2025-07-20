@@ -147,6 +147,8 @@ setTimeout(() => {
 
 ## Create Event Definitions
 
+### Registering Java Events
+
 If no packges provide the event definitions you are looking for, can you define your own with **addEvent(name, event, interface, method)**.
 
 For example, if **StartClientTickEvent** is not previously defined.
@@ -160,9 +162,9 @@ For example, if **StartClientTickEvent** is not previously defined.
 let { ClientTickEvents } =
   Packages.net.fabricmc.fabric.api.client.event.lifecycle.v1;
 
-let { addEvent } = require("listener");
+let listener = require("listener");
 
-addEvent(
+listener.addEvent(
   "StartClientTickEvent",
   ClientTickEvents.START_CLIENT_TICK,
   ClientTickEvents.StartTick,
@@ -170,9 +172,27 @@ addEvent(
 );
 ```
 
+### Creating Custom Event Source
+
+You can also create a custom channel which can be listened to with **createChannel(name)**. And use **dispatchCustomEvent(name, arguments...)** to broadcast an event to all listeners.
+
+```js
+let listener = require("listener");
+
+// ...
+
+listener.createChannel("MyEvent");
+
+addEventListener("myEvent", (arg1, arg2, arg3) => {
+  /* do something */
+});
+
+listener.dispatchCustomEvent("myEvent", [arg1, arg2, arg3]);
+```
+
 ### Tail and Continuation
 
-The **addEvent** method takes two additional parameters.
+The **addEvent** and **createChannel** methods each takes two additional parameters.
 
 #### Tail(output, args) -> newOutput
 
@@ -221,11 +241,11 @@ Combining the two, let's define some **EntitySleepEvents**.
 // init.js
 let { EntitySleepEvents } = Packages.net.fabricmc.fabric.api.entity.event.v1;
 
-let { addEvent } = require("listener");
+let listener = require("listener");
 
 // listeners that returns `void` usually does not require
 // tail or continuation functions
-addEvent(
+listener.addEvent(
   "EntityStartSleepingEvent",
   EntitySleepEvents.START_SLEEPING,
   EntitySleepEvents.StartSleeping,
@@ -235,7 +255,7 @@ addEvent(
 // allow bed only returns true if all listeners return true
 // in other words, stop propagation and return false if false is returned
 // the default value is true
-addEvent(
+listener.addEvent(
   "EntityStartSleepingEvent",
   EntitySleepEvents.ALLOW_BED,
   EntitySleepEvents.AllowBed,
@@ -253,7 +273,7 @@ addEvent(
 // returns the original direction if non is specified
 // the 3rd argument to the listener is modified each time
 // sleeping direction is changed
-addEvent(
+listener.addEvent(
   "EntityModifySleepingDirectionEvent",
   EntitySleepEvents.MODIFY_SLEEPING_DIRECTION,
   EntitySleepEvents.ModifySleepingDirection,
@@ -271,3 +291,19 @@ addEvent(
   },
 );
 ```
+
+## Pre-listening to Events
+
+When listening to an event not yet registered, you will get an error as expected. But this is allowed if you add in the **prelisten** option.
+
+```js
+addEventListener(
+  "anEventNotYetRegistered",
+  () => {
+    /* do stuff */
+  },
+  { prelisten: true },
+);
+```
+
+This is useful if you want to handle an event from a package that is loaded in later, which has a good reason to depend on the current package and not the other way round.

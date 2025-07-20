@@ -287,7 +287,7 @@ function escapeSubcommand() {
           time: {
             type: "greedy",
             execute: escapeExecute,
-            suggests: () => {
+            suggests: (name) => {
               let suggestions = [];
               let now = new Date();
 
@@ -310,7 +310,7 @@ function escapeSubcommand() {
 
 The command **/myCommand escape &lt;name&gt; &lt;time&gt;** now suggests the current time, 10 minutes after current time, 20 minutes after, and so on.
 
-> The generator function may take **CommandContext** as an argument, learn more about **CommandContext** on [Fabric Docs](https://docs.fabricmc.net/develop/commands/suggestions).
+The generator function may take the value of previous arguments as parameter.
 
 <!--
 ### Using Suggestion Providers

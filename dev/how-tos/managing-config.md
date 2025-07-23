@@ -1,10 +1,10 @@
 # Creating Configurable Options
 
-The **config** allows you to use write-on-exit config options (it's blazingly fast 🚀), it also comes with a clickable text interface at **/config** for users to easily change options.
+The **config** package allows you to use write-on-exit config options (it's blazingly fast 🚀), it also comes with a clickable text interface at **/config** for users to easily change options.
 
 ## Add Dependencies
 
-Include [**config**](https://github.com/FabricCore/jscore-openrepo/tree/master/packages/config#config) as dependency **package.json**.
+Include [**config**](https://github.com/FabricCore/jscore-openrepo/tree/master/packages/config#config) as dependency in **package.json**.
 
 ```js
 // package.json

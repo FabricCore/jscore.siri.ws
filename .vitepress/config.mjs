@@ -113,8 +113,12 @@ export default withMermaid({
                             link: "/dev/how-tos/working-with-text",
                         },
                         {
-                            text: "Create User Options",
+                            text: "Manage User Options",
                             link: "/dev/how-tos/managing-config",
+                        },
+                        {
+                            text: "Create Toggles",
+                            link: "/dev/how-tos/toggleables",
                         },
                     ],
                 },

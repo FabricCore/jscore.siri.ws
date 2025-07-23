@@ -291,3 +291,16 @@ addEventListener("clientModifyReceiveGameMessageEvent", (receivedMessage) => {
   ]);
 });
 ```
+
+## Delete Existing Text
+
+You can remove any text you have created using the **cancel()** function.
+
+```js
+let text = require("text");
+
+let sentText = text.sendText("This text will disappear.");
+sentText.remove();
+```
+
+Note that this would leave a **_this message has been removed by the server_** message in its place. This could be useful if you want to collapse a multiline message, or remove outdated output.
